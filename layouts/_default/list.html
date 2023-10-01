@@ -1,8 +1,38 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+
+<h1>{{ .Title }}</h1>
+
+<!-- {{ .Content }} -->
+
+{{ range (readDir "content/notebooks/") }}
+{{ if .IsDir }}
+<details>
+    <summary>{{ .Name | title }}</summary>
+    <ul>
+        {{ $path := printf "notebooks/%s/" .Name }}
+        {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</details>
+{{ end }}
+{{ end }}
+
+<!-- {{ range (readDir "content/notebooks/") }} -->
+<!-- {{ if .IsDir }} -->
+<!-- <p>{{ .Name | title }}</p> -->
+<!-- <ul> -->
+<!--     {{ $path := printf "notebooks/%s/" .Name }} -->
+<!--     {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }} -->
+<!--     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> -->
+<!--     {{ end }} -->
+<!-- </ul> -->
+<!-- {{ end }} -->
+<!-- {{ end }} -->
+
+<!-- {{ range .Page.Pages }} -->
+<!-- <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2> -->
+<!-- {{ end }} -->
+
+
 {{ end }}

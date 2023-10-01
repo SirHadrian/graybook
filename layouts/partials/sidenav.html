@@ -1,0 +1,17 @@
+{{ $current_page := . }}
+{{ $menu_id := "" }}
+{{ range $key, $value := .Params.menu }}
+{{ $menu_id = $key }}
+{{ end }}
+
+<aside class="sidenav">
+    {{/* ...rest of code */}}
+    <div class="menu">
+        <ul>
+            {{ partial "menu-item" (dict
+            "menu" $menu_id
+            "list" (index .Site.Menus $menu_id)
+            "current" $current_page) }}
+        </ul>
+    </div>
+</aside>

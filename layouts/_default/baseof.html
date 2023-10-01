@@ -1,17 +1,61 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+    dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
 <head>
-  {{ partial "head.html" . }}
+    {{ partial "head.html" . }}
 </head>
+
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+    <header>
+        {{ partial "header.html" . }}
+    </header>
+
+
+    <!-- {{ partial "sidenav.html" . }} -->
+
+    <!-- <div class="sidebar"> -->
+    <!--     {{ range .Site.Sections }} -->
+    <!--     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li> -->
+    <!--     {{ end }} -->
+    <!-- </div> -->
+
+    <!-- {{ partial "breadcrumbs.html" . }} -->
+
+    <!-- {{ $home := .Site.Home }} -->
+    <!-- <div class="css-treeview box"> -->
+    <!--     <ul> -->
+    <!--         <li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label> -->
+    <!--             <ul> -->
+    <!--                 {{ template "section-tree-nav" $home }} -->
+    <!--             </ul> -->
+    <!--     </ul> -->
+    <!-- </div> -->
+    <!-- {{ define "section-tree-nav" }} -->
+    <!-- {{ range .Sections}} -->
+    <!-- <li> -->
+    <!-- <li><input type="checkbox" id="item-0-0" checked="checked" /><label for="item-0-0">{{ .Title }}</label> -->
+    <!--     <ul> -->
+    <!--         {{ range .Pages }} -->
+    <!--         <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li> -->
+    <!--         {{ end }} -->
+    <!--     </ul> -->
+    <!-- </li> -->
+    <!-- </li> -->
+    <!-- {{ end }} -->
+    <!-- {{ end }} -->
+
+    <div class="content">
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        <footer>
+            {{ partial "footer.html" . }}
+        </footer>
+    </div>
+
+
 </body>
+
 </html>

@@ -20,3 +20,19 @@ a {
   color: #00e;
   text-decoration: none;
 }
+
+.sidebar{
+    background: white;
+    width: 20%;
+    height: 100%;
+    padding: 0rem;
+    overflow: auto;
+}
+
+.content{
+    background: gray;
+    width: 80%;
+    height: 100%;
+    padding: 1rem;
+    overflow: auto;
+}
