@@ -8,6 +8,7 @@
 
 .hljs {
     color: white;
+    width: 50%;
     background: #242930;
     display: block;
     overflow-x: auto;
