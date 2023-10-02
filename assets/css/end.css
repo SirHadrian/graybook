@@ -8,7 +8,6 @@
 
 .hljs {
     color: white;
-    width: 50%;
     background: #242930;
     display: block;
     overflow-x: auto;
@@ -21,3 +20,22 @@
     color: white;
 }
 
+pre {
+    position: relative;
+    width: 50%;
+}
+
+pre > div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    transform: translate(-1rem, .1rem);
+    visibility: hidden;
+}
+
+pre:hover > div{
+    visibility: visible;
+}
