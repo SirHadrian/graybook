@@ -42,10 +42,21 @@ a {
     min-height: 100vh;
 }
 
+li {
+    list-style-type: none;
+}
+
 li.collapse ul{
     display: none;
 }
 
 li.collapse.open ul{
     display: block;
+}
+
+blockquote {
+    border-left: 0.4em solid rgba(#57cc8a, .8);
+    margin: 1em 0em;
+    padding: .5em 1em;
+    background: #242930;
 }
