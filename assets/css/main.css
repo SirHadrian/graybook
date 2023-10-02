@@ -2,24 +2,23 @@ body {
   color: #222;
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 0rem;
-  max-width: 100%;
-  max-height: 100%;
+  padding: 1rem;
+  margin: 0;
 }
 
 header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 0rem;
+    border-bottom: 1px solid #222;
+    margin-bottom: 0rem;
 }
 
 footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+    border-top: 1px solid #222;
+    margin-top: 1rem;
 }
 
 a {
-  color: #00e;
-  text-decoration: none;
+    color: #00e;
+    text-decoration: none;
 }
 
 .page{
@@ -31,18 +30,16 @@ a {
 
 .sidebar{
     background: white;
-    /* width: 20%; */
-    height: 100%;
     padding: 1rem;
-    overflow: auto;
+    height: 100%;
+    min-height: 100vh;
 }
 
 .content{
     background: gray;
-    /* width: 80%; */
+    padding: 1rem;
     height: 100%;
-    padding: 0rem;
-    overflow: auto;
+    min-height: 100vh;
 }
 
 li.collapse ul{
