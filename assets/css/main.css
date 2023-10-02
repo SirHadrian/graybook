@@ -60,3 +60,14 @@ blockquote {
     padding: .5em 1em;
     background: #242930;
 }
+
+code {
+  /* will target single backtick */
+    color: green;
+}
+
+pre,
+pre code {
+/* will target triple backtick */ 
+    color: red;
+}

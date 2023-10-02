@@ -3,5 +3,19 @@
 .hljs-selector-class,
 .hljs-template-variable,
 .hljs-deletion {
-  color: #242930;
+  color: white;
 }
+
+.hljs {
+    color: white;
+    background: #242930;
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+}
+
+.hljs,
+.hljs-subst {
+    color: white;
+}
+
