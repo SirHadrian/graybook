@@ -19,8 +19,8 @@ footer {
     right: 0;
     padding-left: 1rem;
     font-size: .3cm;
-    border-top: 1px solid #222;
-    background: gray;
+    border-top: 2px solid #000000;
+    background: white;
 }
 
 a {
@@ -43,7 +43,7 @@ a {
 }
 
 .content{
-    background: gray;
+    background: white;
     padding: 1rem;
     height: 100%;
     min-height: 100vh;
