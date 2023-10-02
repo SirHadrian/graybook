@@ -17,6 +17,6 @@ for (const codeblock of document.querySelectorAll('pre')) {
         el.select();
         document.execCommand('copy');
         document.body.removeChild(el);
-        codeblock.childNodes[1].innerHTML = "Copyed!"
+        codeblock.childNodes[1].innerHTML = "Copied!"
     })
 }
