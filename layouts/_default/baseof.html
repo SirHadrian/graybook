@@ -12,49 +12,73 @@
     </header>
 
 
-    <!-- {{ partial "sidenav.html" . }} -->
+    <div class="page">
+        <div class="sidebar">
+            {{ range (readDir "content/notebooks/") }}
+            {{ if .IsDir }}
+            <ul>
+                <li class="collapse">
+                    <span>{{ .Name | title }}</span>
+                    <ul>
+                        {{ $path := printf "notebooks/%s/" .Name }}
+                        {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }}
 
-    <!-- <div class="sidebar"> -->
-    <!--     {{ range .Site.Sections }} -->
-    <!--     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li> -->
-    <!--     {{ end }} -->
-    <!-- </div> -->
+                        <li>
+                            <span><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
+            </ul>
+            {{ end }}
+            {{ end }}
+        </div>
 
-    <!-- {{ partial "breadcrumbs.html" . }} -->
 
-    <!-- {{ $home := .Site.Home }} -->
-    <!-- <div class="css-treeview box"> -->
-    <!--     <ul> -->
-    <!--         <li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label> -->
-    <!--             <ul> -->
-    <!--                 {{ template "section-tree-nav" $home }} -->
-    <!--             </ul> -->
-    <!--     </ul> -->
-    <!-- </div> -->
-    <!-- {{ define "section-tree-nav" }} -->
-    <!-- {{ range .Sections}} -->
-    <!-- <li> -->
-    <!-- <li><input type="checkbox" id="item-0-0" checked="checked" /><label for="item-0-0">{{ .Title }}</label> -->
-    <!--     <ul> -->
-    <!--         {{ range .Pages }} -->
-    <!--         <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li> -->
-    <!--         {{ end }} -->
-    <!--     </ul> -->
-    <!-- </li> -->
-    <!-- </li> -->
-    <!-- {{ end }} -->
-    <!-- {{ end }} -->
+        <!-- {{ partial "sidenav.html" . }} -->
 
-    <div class="content">
-        <main>
-            {{ block "main" . }}{{ end }}
-        </main>
+        <!-- <div class="sidebar"> -->
+        <!--     {{ range .Site.Sections }} -->
+        <!--     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li> -->
+        <!--     {{ end }} -->
+        <!-- </div> -->
 
-        <footer>
-            {{ partial "footer.html" . }}
-        </footer>
+        <!-- {{ partial "breadcrumbs.html" . }} -->
+
+        <!-- {{ $home := .Site.Home }} -->
+        <!-- <div class="css-treeview box"> -->
+        <!--     <ul> -->
+        <!--         <li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label> -->
+        <!--             <ul> -->
+        <!--                 {{ template "section-tree-nav" $home }} -->
+        <!--             </ul> -->
+        <!--     </ul> -->
+        <!-- </div> -->
+        <!-- {{ define "section-tree-nav" }} -->
+        <!-- {{ range .Sections}} -->
+        <!-- <li> -->
+        <!-- <li><input type="checkbox" id="item-0-0" checked="checked" /><label for="item-0-0">{{ .Title }}</label> -->
+        <!--     <ul> -->
+        <!--         {{ range .Pages }} -->
+        <!--         <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li> -->
+        <!--         {{ end }} -->
+        <!--     </ul> -->
+        <!-- </li> -->
+        <!-- </li> -->
+        <!-- {{ end }} -->
+        <!-- {{ end }} -->
+
+        <div class="content">
+            <main>
+                {{ block "main" . }}{{ end }}
+            </main>
+
+            <footer>
+                {{ partial "footer.html" . }}
+            </footer>
+        </div>
+
     </div>
-
 
 </body>
 
