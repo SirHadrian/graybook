@@ -30,7 +30,7 @@ a {
 
 .page{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 16% 1% 83%;
     justify-content: center;
     align-content: center;
 }
@@ -77,4 +77,15 @@ pre,
 pre code {
 /* will target triple backtick */ 
     color: red;
+}
+
+/*** sidebar ***/
+aside.delimiter {
+    width: 3pt;
+    background-color: rgb(59, 59, 59);
+    cursor: col-resize;
+}
+
+aside.delimiter:hover {
+    background-color: rgb(99, 99, 99);
 }
