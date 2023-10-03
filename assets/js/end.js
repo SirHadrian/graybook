@@ -19,4 +19,8 @@ for (const codeblock of document.querySelectorAll('pre')) {
         document.body.removeChild(el);
         codeblock.childNodes[1].innerHTML = "Copied!"
     })
+
+    codeblock.addEventListener('mouseout', () => {
+        codeblock.childNodes[1].innerHTML = "Click to copy"
+    })
 }

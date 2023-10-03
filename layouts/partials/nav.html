@@ -1,0 +1,24 @@
+<!-- <div class="sidebar"> -->
+<!--     {{ range (readDir "content/notebooks/") }} -->
+<!--     {{ if .IsDir }} -->
+<!--     <ul> -->
+<!--         <li class="collapse"> -->
+<!--             <span>{{ .Name | title }}</span> -->
+<!--             <ul> -->
+<!--                 {{ $path := printf "notebooks/%s/" .Name }} -->
+<!--                 {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }} -->
+<!---->
+<!--                 <li> -->
+<!--                     <span><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> -->
+<!--                 </li> -->
+<!--                 {{ end }} -->
+<!--             </ul> -->
+<!--         </li> -->
+<!--     </ul> -->
+<!--     {{ end }} -->
+<!--     {{ end }} -->
+<!-- </div> -->
+
+<aside class="sidebar">
+    {{ partial "module/section_tree" ( dict "context" .Site.Home "currentPage" . ) }}
+</aside>
