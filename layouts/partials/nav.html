@@ -1,24 +1,3 @@
-<!-- <div class="sidebar"> -->
-<!--     {{ range (readDir "content/") }} -->
-<!--     {{ if .IsDir }} -->
-<!--     <ul> -->
-<!--         <li class="collapse"> -->
-<!--             <span>{{ .Name | title }}</span> -->
-<!--             <ul> -->
-<!--                 {{ $path := printf "%s/" .Name }} -->
-<!--                 {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }} -->
-<!---->
-<!--                 <li> -->
-<!--                     <span><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> -->
-<!--                 </li> -->
-<!--                 {{ end }} -->
-<!--             </ul> -->
-<!--         </li> -->
-<!--     </ul> -->
-<!--     {{ end }} -->
-<!--     {{ end }} -->
-<!-- </div> -->
-
 <div class="sidebar">
     <ul>
         {{ template "section-tree-nav" . }}
@@ -37,7 +16,7 @@
 
 {{ define "current-section_pages" }}
 <ul>
-    {{ range .Pages }}
+    {{ range .Pages.ByWeight }}
 
     {{ if .IsSection }}
     <li class="collapse">
