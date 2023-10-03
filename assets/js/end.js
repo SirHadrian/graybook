@@ -1,5 +1,6 @@
 for (const notebook of document.getElementsByClassName('collapse')) {
-    notebook.addEventListener('click', () => {
+    notebook.addEventListener('click', (event) => {
+        event.stopPropagation()
         notebook.classList.toggle('open')
     })
 }

@@ -67,11 +67,11 @@ li.collapse ul{
     list-style-type: disc;
 }
 
-li.collapse ul{
+li.collapse > ul{
     display: none;
 }
 
-li.collapse.open ul{
+li.collapse.open > ul{
     display: block;
 }
 

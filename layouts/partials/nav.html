@@ -38,13 +38,17 @@
 {{ define "current-section_pages" }}
 <ul>
     {{ range .Pages }}
+
     {{ if .IsSection }}
     <li class="collapse">
         <span>{{ .Title }}</span>
+        {{ template "current-section_pages" . }}
     </li>
-    {{ template "current-section_pages" . }}
+
     {{ else }}
+
     <li><a href="{{ .Permalink}}"> {{ .Title }} </a></li>
+
     {{ end }}
     {{ end }}
 </ul>
