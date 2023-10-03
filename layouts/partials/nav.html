@@ -28,7 +28,7 @@
 {{ define "section-tree-nav" }}
 {{ range .Sections }}
 <li class="collapse">
-    <span>{{ .Name | title }}</span>
+    <span>{{ .Section | title }}</span>
     {{ template "current-section_pages" . }}
 </li>
 {{ end }}
@@ -38,7 +38,14 @@
 {{ define "current-section_pages" }}
 <ul>
     {{ range .Pages }}
+    {{ if .IsSection }}
+    <li class="collapse">
+        <span>{{ .Title }}</span>
+    </li>
+    {{ template "current-section_pages" . }}
+    {{ else }}
     <li><a href="{{ .Permalink}}"> {{ .Title }} </a></li>
+    {{ end }}
     {{ end }}
 </ul>
 {{ end }}
