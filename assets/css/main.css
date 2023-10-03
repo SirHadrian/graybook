@@ -76,10 +76,11 @@ li.collapse.open ul{
 }
 
 blockquote {
-    border-left: 0.4em solid rgba(#57cc8a, .8);
+    border-left: .5rem solid green;
     margin: 1em 0em;
     padding: .5em 1em;
     background: #242930;
+    color: white;
 }
 
 code {
