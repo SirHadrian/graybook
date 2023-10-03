@@ -1,11 +1,11 @@
 <!-- <div class="sidebar"> -->
-<!--     {{ range (readDir "content/notebooks/") }} -->
+<!--     {{ range (readDir "content/") }} -->
 <!--     {{ if .IsDir }} -->
 <!--     <ul> -->
 <!--         <li class="collapse"> -->
 <!--             <span>{{ .Name | title }}</span> -->
 <!--             <ul> -->
-<!--                 {{ $path := printf "notebooks/%s/" .Name }} -->
+<!--                 {{ $path := printf "%s/" .Name }} -->
 <!--                 {{ range where (where $.Site.RegularPages "Type" "notebooks") "File.Dir" $path }} -->
 <!---->
 <!--                 <li> -->
@@ -19,6 +19,26 @@
 <!--     {{ end }} -->
 <!-- </div> -->
 
-<aside class="sidebar">
-    {{ partial "module/section_tree" ( dict "context" .Site.Home "currentPage" . ) }}
-</aside>
+<div class="sidebar">
+    <ul>
+        {{ template "section-tree-nav" . }}
+    </ul>
+</div>
+
+{{ define "section-tree-nav" }}
+{{ range .Sections }}
+<li class="collapse">
+    <span>{{ .Name | title }}</span>
+    {{ template "current-section_pages" . }}
+</li>
+{{ end }}
+{{ end }}
+
+
+{{ define "current-section_pages" }}
+<ul>
+    {{ range .Pages }}
+    <li><a href="{{ .Permalink}}"> {{ .Title }} </a></li>
+    {{ end }}
+</ul>
+{{ end }}
