@@ -99,12 +99,17 @@ li.collapse.open:before {
 }
 
 li.collapse > ul{
-    display: none;
+    display: flex;
+    flex-direction: column;
     list-style-type: "\f044  ";
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.1s linear;
 }
 
 li.collapse.open > ul{
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 blockquote {
