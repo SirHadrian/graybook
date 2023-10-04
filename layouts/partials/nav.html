@@ -5,7 +5,7 @@
 </div>
 
 {{ define "section-tree-nav" }}
-{{ range .Sections }}
+{{ range $.Site.Sections }}
 <li class="collapse">
     <span>{{ .Section | title }}</span>
     {{ template "current-section_pages" . }}
