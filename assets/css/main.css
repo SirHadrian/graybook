@@ -73,6 +73,7 @@ a {
 }
 
 .content{
+    width: 80%;
     background: white;
     margin: 2rem;
     height: 100%;
@@ -132,7 +133,7 @@ code {
 /* will target tripple backtick */
 div.highlight {
     position: relative;
-    width: 70%;
+    width: 100%;
 }
 
 div.highlight > span.btn-copy {
