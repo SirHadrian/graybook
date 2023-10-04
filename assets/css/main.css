@@ -81,6 +81,10 @@ a {
     font-size: 1.2em;
 }
 
+.content img {
+    width: 70%;
+}
+
 li.collapse {
     list-style-type: none;
     cursor: pointer;
