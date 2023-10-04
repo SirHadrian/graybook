@@ -58,7 +58,7 @@ a {
 
 .page{
     display: grid;
-    grid-template-columns: 16% 1% 83%;
+    grid-template-columns: 23% 1% 76%;
     justify-content: center;
     align-content: center;
     margin-top: 2rem;
