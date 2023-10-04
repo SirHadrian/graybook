@@ -19,6 +19,7 @@ header {
     left: 0;
     right: 0;
     background: white;
+    z-index: 999;
 }
 
 header .title {

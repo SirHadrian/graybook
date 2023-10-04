@@ -21,21 +21,20 @@
     color: white;
 }
 
-pre {
+div.highlight {
     position: relative;
-    width: 50%;
+    width: 70%;
 }
 
-pre > div{
+div.highlight > span.btn-copy {
     position: absolute;
     top: 0;
     right: 0;
-    background: transparent;
-    color: white;
     transform: translate(-1rem, .1rem);
     visibility: hidden;
+    color: white;
 }
 
-pre:hover > div{
+div.highlight:hover > span.btn-copy {
     visibility: visible;
 }

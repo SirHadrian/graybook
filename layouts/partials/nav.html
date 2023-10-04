@@ -1,8 +1,6 @@
-<div class="sidebar">
-    <ul>
-        {{ template "section-tree-nav" . }}
-    </ul>
-</div>
+<ul>
+    {{ template "section-tree-nav" . }}
+</ul>
 
 {{ define "section-tree-nav" }}
 {{ range $.Site.Sections }}
