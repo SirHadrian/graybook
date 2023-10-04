@@ -1,13 +1,41 @@
-<ol class="nav navbar-nav">
-    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-</ol>
-{{ define "breadcrumbnav" }}
-{{ if .p1.Parent }}
-{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 ) }}
-{{ else if not .p1.IsHome }}
-{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 ) }}
+<!-- <ol class="nav navbar-nav"> -->
+<!--     {{ template "breadcrumbnav" (dict "p1" . "p2" .) }} -->
+<!-- </ol> -->
+<!-- {{ define "breadcrumbnav" }} -->
+<!-- {{ if .p1.Parent }} -->
+<!-- {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 ) }} -->
+<!-- {{ else if not .p1.IsHome }} -->
+<!-- {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 ) }} -->
+<!-- {{ end }} -->
+<!-- <li{{ if eq .p1 .p2 }} class="active" {{ end }}> -->
+<!--     <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a> -->
+<!--     </li> -->
+<!--     {{ end }} -->
+
+
+
+
+{{ if .Parent }}
+{{ partial "breadcrumbs.html" .Parent }}
+{{ else if not .IsHome }}
+{{ partial "breadcrumbs.html" .Site.Home }}
 {{ end }}
-<li{{ if eq .p1 .p2 }} class="active" {{ end }}>
-    <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
-    </li>
+
+{{ if not .IsHome }}
+/
+{{ end }}
+
+
+<a href="{{ .Permalink }}" class="bread-btn">
+    {{ if .IsHome }}
+    <i class="bi bi-house-fill"></i>
+    {{ else if eq .Kind "taxonomy" }}
+    {{ partial "module/term_icon" . }}
     {{ end }}
+
+    {{ if .IsHome }}
+    Home
+    {{ else }}
+    {{ .Title }}
+    {{ end }}
+</a>

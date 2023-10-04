@@ -11,44 +11,20 @@
         {{ partial "header.html" . }}
     </header>
 
+
     <div class="page">
 
         {{ partial "nav.html" . }}
 
         <div class="delimiter"></div>
 
-        <!-- <div class="sidebar"> -->
-        <!--     {{ range .Site.Sections }} -->
-        <!--     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li> -->
-        <!--     {{ end }} -->
-        <!-- </div> -->
-
-        <!-- {{ partial "breadcrumbs.html" . }} -->
-
-        <!-- {{ $home := .Site.Home }} -->
-        <!-- <div class="css-treeview box"> -->
-        <!--     <ul> -->
-        <!--         <li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label> -->
-        <!--             <ul> -->
-        <!--                 {{ template "section-tree-nav" $home }} -->
-        <!--             </ul> -->
-        <!--     </ul> -->
-        <!-- </div> -->
-        <!-- {{ define "section-tree-nav" }} -->
-        <!-- {{ range .Sections}} -->
-        <!-- <li> -->
-        <!-- <li><input type="checkbox" id="item-0-0" checked="checked" /><label for="item-0-0">{{ .Title }}</label> -->
-        <!--     <ul> -->
-        <!--         {{ range .Pages }} -->
-        <!--         <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li> -->
-        <!--         {{ end }} -->
-        <!--     </ul> -->
-        <!-- </li> -->
-        <!-- </li> -->
-        <!-- {{ end }} -->
-        <!-- {{ end }} -->
-
         <div class="content">
+
+            <div class="breadcrumbs">
+                <i class="bi bi-folder"></i>
+                {{ partial "breadcrumbs.html" . }}
+            </div>
+
             <main>
                 {{ block "main" . }}{{ end }}
             </main>
