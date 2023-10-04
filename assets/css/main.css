@@ -130,7 +130,6 @@ div.delimiter:hover {
 
 .breadcrumbs {
     color: #99a1ff;
-    padding-left: 5pt;
-    padding-right: 5pt;
+    padding: 1rem;
     line-height: 1.5em;
 }
