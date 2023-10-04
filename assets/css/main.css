@@ -95,8 +95,16 @@ li.collapse {
     cursor: pointer;
 }
 
+li.collapse:before {
+  content: "\f054";
+}
+
+li.collapse.open:before {
+  content: "\f078";
+}
+
 li.collapse ul{
-    list-style-type: disc;
+    list-style-type: "\f044  ";
 }
 
 li.collapse > ul{
