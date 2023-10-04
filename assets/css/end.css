@@ -1,26 +1,3 @@
-.hljs-string,
-.hljs-section,
-.hljs-selector-class,
-.hljs-template-variable,
-.hljs-deletion {
-  color: white;
-}
-
-.hljs {
-    color: white;
-    background: #242930;
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.hljs,
-.hljs-subst {
-    color: white;
-}
-
 div.highlight {
     position: relative;
     width: 70%;
