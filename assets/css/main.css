@@ -153,3 +153,10 @@ div.highlight:hover > span.btn-copy {
     visibility: visible;
 }
 
+a {
+    color: blue;
+}
+
+a:hover{
+    color: green;
+}
