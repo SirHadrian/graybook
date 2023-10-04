@@ -2,7 +2,7 @@
 
 <h2>{{ .Title }}</h2>
 
-{{ range .Page.Pages }}
+{{ range .Pages.ByTitle }}
 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ end }}
 
