@@ -13,6 +13,7 @@
     overflow-x: auto;
     padding: 0.5em;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .hljs,
@@ -30,7 +31,6 @@ pre > div{
     top: 0;
     right: 0;
     background: transparent;
-    cursor: pointer;
     color: white;
     transform: translate(-1rem, .1rem);
     visibility: hidden;
