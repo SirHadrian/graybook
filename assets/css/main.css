@@ -8,15 +8,34 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-columns: 9% 1% 90%;
     border-bottom: 3pt solid #222;
     margin-bottom: 0rem;
-    padding: 1rem;
+    padding: 0rem;
     line-height: 0;
     position: fixed; 
     top: 0;
     left: 0;
     right: 0;
     background: white;
+}
+
+header .title {
+    padding: 1rem;
+}
+
+header .menu {
+    padding: 1rem;
+}
+
+header ul {
+    padding: 0;
+}
+
+header ul > li{
+    display: inline-block;
+    list-style: none;
 }
 
 footer {
