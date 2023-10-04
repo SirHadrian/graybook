@@ -137,14 +137,21 @@ code {
 /* will target tripple backtick */
 div.highlight {
     position: relative;
-    width: 100%;
+    overflow: scroll;
+}
+
+div.highlight > pre {
+    width: max-content;
+    min-width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
 }
 
 div.highlight > span.btn-copy {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-1rem, .1rem);
+    transform: translate(-1rem, 1rem);
     visibility: hidden;
     color: white;
 }

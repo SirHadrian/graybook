@@ -12,17 +12,17 @@ for (const codeblock of document.getElementsByClassName('highlight')) {
     codeblock.appendChild(item)
 
     codeblock.addEventListener("click", () => {
-        codeblock.childNodes[2].innerHTML = ""
+        codeblock.childNodes[1].innerHTML = ""
         const el = document.createElement('textarea');
         el.value = codeblock.textContent;
         document.body.appendChild(el);
         el.select();
         document.execCommand('copy');
         document.body.removeChild(el);
-        codeblock.childNodes[2].innerHTML = "Copied!"
+        codeblock.childNodes[1].innerHTML = "Copied!"
     })
 
     codeblock.addEventListener('mouseout', () => {
-        codeblock.childNodes[2].innerHTML = "Click to copy"
+        codeblock.childNodes[1].innerHTML = "Click to copy"
     })
 }
