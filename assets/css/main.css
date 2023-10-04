@@ -25,6 +25,7 @@ header {
 
 header .title {
     padding: 0.4rem;
+    margin-left: 1rem;
 }
 
 header .menu {
@@ -35,9 +36,12 @@ header ul {
     padding: 0;
 }
 
-header ul > li{
+header ul > li {
     display: inline-block;
     list-style: none;
+    margin-left: 2rem;
+    padding-top: 0.3rem;
+    font-size: 1.3em;
 }
 
 footer {
@@ -107,8 +111,17 @@ blockquote {
     border-left: .5rem solid green;
     margin: 1em 0em;
     padding: .5em 1em;
-    background: #242930;
+    background-color: #20252b;
     color: white;
+}
+
+table {
+    background-color: #242930;
+}
+
+table thead {
+    color: green;
+    background-color: #1a1f24;
 }
 
 /*** sidebar ***/
