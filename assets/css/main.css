@@ -160,6 +160,7 @@ div.highlight {
 }
 
 div.highlight > pre {
+    background-color: #191c22 !important;
     width: max-content;
     min-width: 100%;
     padding: 1rem;
