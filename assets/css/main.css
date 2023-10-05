@@ -143,6 +143,7 @@ div.delimiter:hover {
     color: #99a1ff;
     padding: 1rem;
     line-height: 1.5em;
+    border-bottom: 4pt solid #5f6361;
 }
 
 /* Code blocks */
