@@ -229,4 +229,8 @@ a:hover{
         color: white;
         font-size: 0.8em;
     }
+
+    div.highlight {
+        font-size: 0.7em;
+    }
 }
