@@ -202,8 +202,9 @@ a:hover{
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding: 1rem;
+        font-size: 0.8em;
     }
 
     .content {
@@ -218,5 +219,14 @@ a:hover{
 
     div.delimiter {
         display: none;
+    }
+
+    blockquote {
+        border-left: .3rem solid #27c25b;
+        margin: 1em 0em;
+        padding: .3em 1em;
+        background-color: #20252b;
+        color: white;
+        font-size: 0.8em;
     }
 }
