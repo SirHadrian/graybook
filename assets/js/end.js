@@ -1,10 +1,17 @@
+let visibile_sidebar = true
+
 const notebook = document.getElementById('notebook')
 notebook.addEventListener('click', () => {
-    const sidebar = document.getElementById('sidebar')
-    const page = document.getElementById('page')
 
-    page.style.display = 'flex'
-    page.style.flexDirection = 'column'
+    const page = document.getElementById('page')
+    if (visibile_sidebar == true) {
+        page.style.display = 'flex'
+        page.style.flexDirection = 'column'
+        visibile_sidebar = false
+    } else {
+        page.style.display = 'grid'
+        visibile_sidebar = true
+    }
 
     sidebar.classList.toggle("close")
 })

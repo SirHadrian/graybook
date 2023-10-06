@@ -247,4 +247,8 @@ a:hover {
     footer {
         font-size: 0.4em;
     }
+
+    #content img {
+        width: 100%;
+    }
 }
