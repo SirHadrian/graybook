@@ -72,6 +72,18 @@ footer {
     font-size: 1.2em;
 }
 
+#nav {
+    min-height: max-content;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 23%;
+    /* margin-top: 3rem; */
+}
+
 #content {
     width: 90%;
     margin: 2rem;
