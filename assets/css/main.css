@@ -10,7 +10,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 9% 1% 90%;
+    grid-template-columns: 10% 90%;
     border-bottom: 3pt solid #5f6361;
     margin-bottom: 0rem;
     padding: 0rem;
@@ -23,9 +23,10 @@ header {
     z-index: 999;
 }
 
-header .title {
+header #notebook {
     padding: 0.4rem;
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 header .menu {
@@ -55,7 +56,7 @@ footer {
     border-top: 3pt solid #5f6361;
 }
 
-.page{
+#page {
     display: grid;
     grid-template-columns: 23% 1% 76%;
     justify-content: center;
@@ -63,7 +64,7 @@ footer {
     margin-top: 2rem;
 }
 
-.sidebar{
+#sidebar {
     background-color: #282c34;
     padding-top: 2rem;
     height: 100%;
@@ -71,7 +72,7 @@ footer {
     font-size: 1.2em;
 }
 
-.content{
+#content {
     width: 80%;
     background-color: #282c34;
     margin: 2rem;
@@ -80,7 +81,7 @@ footer {
     font-size: 1.2em;
 }
 
-.content img {
+#content img {
     width: 70%;
 }
 
@@ -97,7 +98,7 @@ li.collapse.open:before {
   content: "\f078";
 }
 
-li.collapse > ul{
+li.collapse > ul {
     display: flex;
     flex-direction: column;
     list-style-type: "\f044  ";
@@ -106,7 +107,7 @@ li.collapse > ul{
     transition: opacity 0.3s, visibility 0.1s linear;
 }
 
-li.collapse.open > ul{
+li.collapse.open > ul {
     visibility: visible;
     opacity: 1;
 }
@@ -129,13 +130,13 @@ table thead {
 }
 
 /*** sidebar ***/
-div.delimiter {
+div#delimiter {
     width: 3pt;
     background-color: #5f6361;
     cursor: col-resize;
 }
 
-div.delimiter:hover {
+div#delimiter:hover {
     background-color: #727372;
 }
 
@@ -185,8 +186,12 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: #27c25b;
+}
+
+#sidebar.close {
+    display: none;
 }
 
 /* ============ Media Queries (Small Devices) ================== */
@@ -198,7 +203,7 @@ a:hover{
         font-size: 0.6em;
     }
 
-    .page{
+    #page {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -208,17 +213,17 @@ a:hover{
         font-size: 0.9em;
     }
 
-    .content {
+    #content {
         width: 100%;
         margin: 1rem;
         font-size: 1em;
     }
 
-    .sidebar {
+    #sidebar {
         display: none;
     }
 
-    div.delimiter {
+    div#delimiter {
         display: none;
     }
 

@@ -1,3 +1,14 @@
+const notebook = document.getElementById('notebook')
+notebook.addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebar')
+    const page = document.getElementById('page')
+
+    page.style.display = 'flex'
+    page.style.flexDirection = 'column'
+
+    sidebar.classList.toggle("close")
+})
+
 for (const notebook of document.getElementsByClassName('collapse')) {
     notebook.addEventListener('click', (event) => {
         event.stopPropagation()
