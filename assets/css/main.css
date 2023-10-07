@@ -125,11 +125,12 @@ li.collapse.open > ul {
 }
 
 blockquote {
-    border-left: .5rem solid #27c25b;
+    border-left: .3rem solid #27c25b;
     margin: 1em 0em;
     padding: .5em 1em;
     background-color: #20252b;
     color: white;
+    font-size: 0.8em;
 }
 
 table {
