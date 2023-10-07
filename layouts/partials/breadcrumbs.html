@@ -9,10 +9,9 @@
 {{ end }}
 
 <a href="{{ .RelPermalink }}" class="bread-btn">
-
-    {{ if .IsHome }}
-    Home
-    {{ else }}
-    {{ .Title }}
-    {{ end }}
+  {{ if .IsHome }}
+  Home
+  {{ else }}
+  {{ .Title }}
+  {{ end }}
 </a>

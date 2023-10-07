@@ -13,6 +13,6 @@ pageRef = '/tags'
 weight = 20
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+[module.hugoVersion]
+extended = false
+min = "0.116.0"

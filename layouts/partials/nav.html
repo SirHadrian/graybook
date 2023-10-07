@@ -1,12 +1,12 @@
 <ul>
-    {{ template "section-tree-nav" . }}
+  {{ template "section-tree-nav" . }}
 </ul>
 
 {{ define "section-tree-nav" }}
 {{ range $.Site.Sections }}
 <li class="collapse">
-    <span>{{ .Section | title }}</span>
-    {{ template "current-section_pages" . }}
+  <span>{{ .Section | title }}</span>
+  {{ template "current-section_pages" . }}
 </li>
 {{ end }}
 {{ end }}
@@ -14,19 +14,19 @@
 
 {{ define "current-section_pages" }}
 <ul>
-    {{ range .Pages.ByWeight }}
+  {{ range .Pages.ByWeight }}
 
-    {{ if .IsSection }}
-    <li class="collapse">
-        <span>{{ .Title }}</span>
-        {{ template "current-section_pages" . }}
-    </li>
+  {{ if .IsSection }}
+  <li class="collapse">
+    <span>{{ .Title }}</span>
+    {{ template "current-section_pages" . }}
+  </li>
 
-    {{ else }}
+  {{ else }}
 
-    <li><a href="{{ .RelPermalink }}"> {{ .Title }} </a></li>
+  <li><a href="{{ .RelPermalink }}"> {{ .Title }} </a></li>
 
-    {{ end }}
-    {{ end }}
+  {{ end }}
+  {{ end }}
 </ul>
 {{ end }}
