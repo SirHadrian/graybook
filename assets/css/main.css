@@ -171,6 +171,7 @@ code {
 div.highlight {
   position: relative;
   overflow: scroll;
+  font-size: 0.8em;
 }
 
 div.highlight > pre {
