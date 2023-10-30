@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<ul class="taxonomy-list">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+
+  {{ if eq (len $taxonomy) 1 }}
+  <h5 class="taxonomy"><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></h5>
+  {{ else if le (len $taxonomy) 3 }}
+  <h3 class="taxonomy"><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></h3>
+  {{ else if le (len $taxonomy) 5 }}
+  <h1 class="taxonomy"><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></h1>
+  {{ end }}
+
+  {{ end }}
+</ul>
+
+{{ end }}

@@ -93,6 +93,16 @@ footer {
   font-size: 1.2em;
 }
 
+.taxonomy {
+  padding: .5rem;
+  display: inline;
+}
+
+.taxonomy-list {
+  padding: 1rem;
+  list-style: none;
+}
+
 #content img {
   width: 50%;
 }
