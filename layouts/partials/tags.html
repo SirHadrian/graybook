@@ -2,7 +2,7 @@
 <ul>
   {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
   $taxonomy $tag) -}}
-  <li>
+  <li class="list-tags">
     <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
   </li>
   {{- end -}} {{- end -}}

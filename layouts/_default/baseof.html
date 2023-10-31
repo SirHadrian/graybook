@@ -28,11 +28,13 @@
         {{ partial "breadcrumbs.html" . }}
       </div>
 
+      <div class="top-tags">
+        {{ partial "tags.html" .}}
+      </div>
+
       <main>
         {{ block "main" . }}{{ end }}
       </main>
-
-      {{ partial "tags.html" .}}
 
     </div>
 

@@ -170,6 +170,17 @@ div#delimiter:hover {
   border-bottom: 4pt solid #5f6361;
 }
 
+.top-tags {
+  padding: 1rem;
+}
+
+.top-tags .list-tags {
+  list-style: none;
+  display: inline;
+  padding-bottom: 2rem;
+  border-bottom: 3pt solid #5f6361;
+}
+
 /* Code blocks */
 code {
   /* will target single backtick */
