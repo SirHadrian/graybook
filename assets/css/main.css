@@ -229,6 +229,26 @@ a:hover {
   display: none;
 }
 
+#fixed-totop-button {
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  padding-right: 1.2rem;
+  border-radius: 50%;
+  border: 2px solid #16b6c4;
+  color: #16b6c4;
+  background-color: #1d2128;
+  cursor: pointer;
+}
+
+#fixed-totop-button:hover {
+  color: #27c25b;
+  border: 2px solid #27c25b;
+}
+
 /* ============ Media Queries (Small Devices) ================== */
 @media only screen and (max-width: 800px) {
 
