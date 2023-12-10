@@ -263,9 +263,15 @@ a:hover {
 @media only screen and (max-width: 800px) {
 
   header {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 10% auto;
+    padding: 0rem;
     font-size: 0.6em;
+  }
+
+  header > .breadcrumbs {
+    padding: 0rem;
+    padding-bottom: 0.5rem;
   }
 
   #page {
