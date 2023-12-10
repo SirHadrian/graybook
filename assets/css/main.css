@@ -10,7 +10,7 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 10% 13% 1% auto;
   border-bottom: 3pt solid #5f6361;
   margin-bottom: 0rem;
   padding: 0rem;
@@ -167,7 +167,17 @@ div#delimiter:hover {
   color: #99a1ff;
   padding: 1rem;
   line-height: 1.5em;
-  border-bottom: 4pt solid #5f6361;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  /* border-bottom: 4pt solid #5f6361; */
+  width: 100%;
+}
+
+.breadcrumbs > a {
+  margin-right: 0.6rem;
+  margin-left: 0.6rem;
 }
 
 .top-tags {

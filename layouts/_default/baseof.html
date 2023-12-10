@@ -9,6 +9,10 @@
 <body>
   <header>
     {{ partial "header.html" . }}
+    <div id="delimiter"></div>
+    <div class="breadcrumbs">
+      {{ partial "breadcrumbs.html" . }}
+    </div>
   </header>
 
 
@@ -24,9 +28,6 @@
 
     <div id="content">
 
-      <div class="breadcrumbs">
-        {{ partial "breadcrumbs.html" . }}
-      </div>
 
       <div class="top-tags">
         {{ partial "tags.html" .}}
@@ -36,7 +37,7 @@
         {{ block "main" . }}{{ end }}
       </main>
 
-      <a href="#"><button id="fixed-totop-button" type="button"> </button></a>
+      <!-- <a href="#"><button id="fixed-totop-button" type="button"> </button></a> -->
 
     </div>
 
