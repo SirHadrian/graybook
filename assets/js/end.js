@@ -1,20 +1,23 @@
-// let visibile_sidebar = true
-//
-// const notebook = document.getElementById('notebook')
-// notebook.addEventListener('click', () => {
-//
-//         const page = document.getElementById('page')
-//         if (visibile_sidebar == true) {
-//                 page.style.display = 'flex'
-//                 page.style.flexDirection = 'column'
-//                 visibile_sidebar = false
-//         } else {
-//                 page.style.display = 'grid'
-//                 visibile_sidebar = true
-//         }
-//
-//         sidebar.classList.toggle("close")
-// })
+if (window.screen.width >= 1024) {
+
+        let visibile_sidebar = true
+
+        const notebook = document.getElementById('notebook')
+        notebook.addEventListener('click', () => {
+
+                const page = document.getElementById('page')
+                if (visibile_sidebar == true) {
+                        page.style.display = 'flex'
+                        page.style.flexDirection = 'column'
+                        visibile_sidebar = false
+                } else {
+                        page.style.display = 'grid'
+                        visibile_sidebar = true
+                }
+
+                sidebar.classList.toggle("close")
+        })
+}
 
 for (const notebook of document.getElementsByClassName('collapse')) {
         notebook.addEventListener('click', (event) => {
