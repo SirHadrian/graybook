@@ -262,7 +262,40 @@ a:hover {
 }
 
 /* ============ Media Queries (Small Devices) ================== */
-@media only screen and (max-width: 800px) {
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1024px) {
+
+        header {
+                grid-template-columns: 10% 16% 1% auto;
+        }
+
+}
+
+@media (min-width: 768px) {
+
+        header {
+                grid-template-columns: 10% 26% 1% auto;
+        }
+
+        header .menu {
+                padding: 0.4rem;
+                margin-left: 2rem;
+        }
+
+        #sidebar {
+                display: none;
+        }
+
+        #page div#delimiter {
+                display: none;
+        }
+
+}
+
+@media (min-width: 480px) {
 
         header {
                 display: grid;
@@ -329,4 +362,5 @@ a:hover {
         #content img {
                 width: 100%;
         }
+
 }
