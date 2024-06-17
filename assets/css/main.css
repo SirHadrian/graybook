@@ -4,7 +4,7 @@ body {
         line-height: 1.5;
         padding: 0rem;
         margin: 0;
-        font-size: 1.0em;
+        font-size: 0.8em;
         background-color: #212733;
 }
 
@@ -71,7 +71,7 @@ footer {
         padding-top: 2rem;
         height: 100%;
         min-height: 100vh;
-        font-size: 1.2em;
+        font-size: 1.0em;
 }
 
 #nav {
@@ -92,6 +92,14 @@ footer {
         height: 100%;
         min-height: 100vh;
         font-size: 1.2em;
+}
+
+#content h1 {
+        font-size: 1.6rem;
+}
+
+#content h2 {
+        font-size: 1.2rem;
 }
 
 .taxonomy {
@@ -141,7 +149,7 @@ blockquote {
         padding: .5em 1em;
         background-color: #20252b;
         color: white;
-        font-size: 0.8em;
+        font-size: 1.0em;
 }
 
 table {
@@ -197,7 +205,7 @@ div#delimiter:hover {
 code {
         /* will target single backtick */
         color: green;
-        font-size: 1.5em;
+        font-size: 1.4em;
 }
 
 /* will target tripple backtick */
