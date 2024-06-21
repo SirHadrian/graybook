@@ -27,11 +27,13 @@ header {
 header #notebook {
         padding: 0.4rem;
         margin-left: 1rem;
+        margin-top: 0.4rem;
         cursor: pointer;
 }
 
 header .menu {
         padding: 0.4rem;
+        margin-top: 0.4rem;
 }
 
 header ul {
