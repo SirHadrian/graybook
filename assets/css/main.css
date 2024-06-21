@@ -73,7 +73,7 @@ footer {
         padding-top: 2rem;
         height: 100%;
         min-height: 100vh;
-        font-size: 1.0em;
+        font-size: 1.2em;
 }
 
 #nav {
@@ -124,17 +124,28 @@ li.collapse {
 }
 
 li.collapse:before {
-        content: "\f054";
+        content: "+";
 }
 
 li.collapse.open:before {
-        content: "\f078";
+        content: "-";
+}
+
+.nav-section {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+}
+
+.nav-section > a {
+        position: absolute;
+        margin-left: 1rem;
 }
 
 li.collapse > ul {
         display: flex;
         flex-direction: column;
-        list-style-type: "\f044  ";
+        list-style-type: circle;
         visibility: collapse;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.1s linear;
