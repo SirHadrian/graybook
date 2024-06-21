@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
-      dir="{{ or site.Language.LanguageDirection `ltr` }}">
+        dir="{{ or site.Language.LanguageDirection `ltr` }}">
 
-	<head>
-		{{ partial "head.html" . }}
-	</head>
+        <head>
+                {{ partial "head.html" . }}
+        </head>
 
-	<body>
-		<header>
-			{{ partial "header.html" . }}
-			<div id="delimiter"></div>
-			<div class="breadcrumbs">
-				{{ partial "breadcrumbs.html" . }}
-			</div>
-		</header>
-
-
-		<div id="page">
-
-			<div id="sidebar">
-				<div id="nav">
-					{{ partial "nav.html" . }}
-				</div>
-			</div>
-
-			<div id="delimiter"></div>
-
-			<div id="content">
+        <body>
+                <header>
+                        {{ partial "header.html" . }}
+                <div id="delimiter"></div>
+                        <div class="breadcrumbs">
+                                {{ partial "breadcrumbs.html" . }}
+                        </div>
+                </header>
 
 
-				<div class="top-tags">
-					{{ partial "tags.html" .}}
-				</div>
+        <div id="page">
 
-				<main>
-					{{ block "main" . }}{{ end }}
-				</main>
+                        <div id="sidebar">
+                                <div id="nav">
+                                        {{ partial "nav.html" . }}
+                                </div>
+                        </div>
 
-				<!-- <a href="#"><button id="fixed-totop-button" type="button"> </button></a> -->
+                <div id="delimiter"></div>
 
-			</div>
+                        <div id="content">
 
-			<footer>
-				{{ partial "footer.html" . }}
-			</footer>
-		</div>
 
-	</body>
+                                <div class="top-tags">
+                                        {{ partial "tags.html" .}}
+                                </div>
+
+                                <main>
+                                        {{ block "main" . }}{{ end }}
+                                </main>
+
+                                <!-- <a href="#"><button id="fixed-totop-button" type="button"> </button></a> -->
+
+                        </div>
+
+                        <footer>
+                                {{ partial "footer.html" . }}
+                        </footer>
+                </div>
+
+        </body>
 
 </html>
