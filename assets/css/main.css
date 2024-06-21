@@ -147,12 +147,14 @@ li.collapse > ul {
         flex-direction: column;
         list-style-type: circle;
         visibility: collapse;
+        line-height: 0;
         opacity: 0;
         transition: opacity 0.3s, visibility 0.1s linear;
 }
 
 li.collapse.open > ul {
         visibility: visible;
+        line-height: 1.4rem;
         opacity: 1;
 }
 
